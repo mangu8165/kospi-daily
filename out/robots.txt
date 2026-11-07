@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mangu8165.github.io/kospi-daily/sitemap.xml
