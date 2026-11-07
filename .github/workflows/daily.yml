@@ -22,7 +22,7 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Collect
         env:
-          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+          DART_API_KEY: ${{ secrets.DART_API_KEY || secrets.K1 }}
           TZ: Asia/Seoul
         run: python collector.py ${{ inputs.date }}
       - name: Commit data
