@@ -240,7 +240,9 @@ def build_index():
     days = sorted((p.stem for p in OUT.glob("????-??-??.html")), reverse=True)
     links = "".join(f"<li><a href='{d}.html'>{d} 공시·수급 정리</a></li>" for d in days)
     (OUT / "index.html").write_text(
-        f"<!DOCTYPE html><html lang='ko'><head><meta charset='utf-8'><title>{SITE_NAME}</title></head>"
+        f"<!DOCTYPE html><html lang='ko'><head><meta charset='utf-8'><title>{SITE_NAME}</title>"
+        '<meta name="google-site-verification" content="r0BHadvVb10QC14jseTURbpsrr4WSv1gzHI2cIyJ-Go" />'
+        "<meta name='viewport' content='width=device-width,initial-scale=1'></head>"
         f"<body><h1>{SITE_NAME}</h1><p>평일 장 마감 후 DART 공시와 KRX 투자자별 수급을 자동 집계합니다.</p>"
         f"<p><b><a href='buyback.html'>📊 자사주 소각 공시 성적표 (2026) — 발표 후 주가는 정말 올랐을까?</a></b></p>"
         f"<ul>{links}</ul></body></html>", encoding="utf-8")
