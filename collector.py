@@ -233,7 +233,7 @@ th{{background:#f4f4f4}}.sum{{color:#555}}small{{color:#888}}
 .top li{{margin:8px 0}}.flow{{color:#c0392b;font-size:13px}}dt{{font-weight:600;margin-top:6px}}dd{{margin:0 0 4px 0}}</style></head><body>
 {''.join(parts)}
 <p><small>본 페이지는 공개 데이터를 자동 집계한 정보 제공용이며 투자 권유가 아닙니다.</small></p>
-<p><a href="index.html">전체 날짜 목록</a></p></body></html>"""
+<p><a href="buyback.html">자사주 소각 공시 성적표</a> · <a href="index.html">전체 날짜 목록</a></p></body></html>"""
 
 
 def build_index():
@@ -242,6 +242,7 @@ def build_index():
     (OUT / "index.html").write_text(
         f"<!DOCTYPE html><html lang='ko'><head><meta charset='utf-8'><title>{SITE_NAME}</title></head>"
         f"<body><h1>{SITE_NAME}</h1><p>평일 장 마감 후 DART 공시와 KRX 투자자별 수급을 자동 집계합니다.</p>"
+        f"<p><b><a href='buyback.html'>📊 자사주 소각 공시 성적표 (2026) — 발표 후 주가는 정말 올랐을까?</a></b></p>"
         f"<ul>{links}</ul></body></html>", encoding="utf-8")
     (OUT / "llms.txt").write_text(
         f"# {SITE_NAME}\n\n> 한국 코스피·코스닥의 일일 주요 공시(DART)와 외국인·기관 순매수 상위(KRX)를 "
@@ -250,7 +251,7 @@ def build_index():
         encoding="utf-8")
     (OUT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-        + f"<url><loc>{SITE_URL}/</loc></url>"
+        + f"<url><loc>{SITE_URL}/</loc></url><url><loc>{SITE_URL}/buyback.html</loc></url>"
         + "".join(f"<url><loc>{SITE_URL}/{d}.html</loc><lastmod>{d}</lastmod></url>" for d in days)
         + "</urlset>", encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
