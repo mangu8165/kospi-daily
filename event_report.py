@@ -8,6 +8,7 @@ import os, csv, json, html, statistics as st, datetime as dt
 from pathlib import Path
 import requests
 from pykrx import stock
+from event_returns import aligned_returns, METHOD_VERSION
 
 DART_KEY = os.environ.get("DART_API_KEY", "")
 ROOT = Path(__file__).parent
@@ -24,7 +25,7 @@ START = dt.date(2026, 1, 1)
 HORIZONS = (1, 5, 20)
 SITE_URL = "https://mangu8165.github.io/kospi-daily"
 FIELDS = ["date", "code", "corp", "market", "title", "url"] + \
-         [f"r{h}" for h in HORIZONS] + [f"x{h}" for h in HORIZONS] + ["flag"]
+         [f"r{h}" for h in HORIZONS] + [f"x{h}" for h in HORIZONS] + ["flag", "method_version"]
 LIMIT = 0.30   # 한국 증시 일일 가격제한폭 ±30%: 이를 넘는 하루 변동 = 액면분할·감자·거래정지 등 데이터 왜곡
 ymd = lambda d: d.strftime("%Y%m%d")
 
@@ -48,7 +49,7 @@ def fetch_new(since: dt.date, until: dt.date) -> list[dict]:
                 "pblntf_ty": CFG["ty"], "page_count": 100, "page_no": page}, timeout=30).json()
             if d.get("status") != "000":
                 if d.get("status") != "013":
-                    print("[DART]", d.get("status"), d.get("message"))
+                    raise RuntimeError(f"DART collection failed: {d.get('status')}")
                 break
             for it in d["list"]:
                 rn = it["report_nm"].replace(" ", "")
@@ -85,26 +86,29 @@ def fwd_returns(series, base_date: str):
 
 
 def compute(events: list[dict], today: dt.date):
-    idx = {}
-    for mk, code in (("코스피", "1001"), ("코스닥", "2001")):
-        try:
-            idx[mk] = stock.get_index_ohlcv(ymd(START - dt.timedelta(days=14)), ymd(today), code)["종가"]
-        except Exception as e:
-            print("[지수 오류]", mk, e)
+    def mapping(series):
+        return {day.date().isoformat(): float(value) for day, value in series.items()}
+
+    indexes = {}
+    for market, code in (("코스피", "1001"), ("코스닥", "2001")):
+        series = stock.get_index_ohlcv(ymd(START - dt.timedelta(days=14)), ymd(today), code)["종가"]
+        if series.empty:
+            raise RuntimeError(f"Empty benchmark: {market}")
+        indexes[market] = mapping(series)
     for ev in events:
-        if ev.get(f"r{HORIZONS[-1]}") not in (None, "") and "flag" in ev:
-            continue                         # 이미 20일 수익률까지 확정된 건 건너뜀
-        try:
-            d0 = dt.date.fromisoformat(ev["date"])
-            px = stock.get_market_ohlcv(ymd(d0 - dt.timedelta(days=14)), ymd(today), ev["code"])["종가"]
-        except Exception as e:
-            print("[주가 오류]", ev["corp"], e); continue
-        r = fwd_returns(px, ev["date"])
-        ev["flag"] = r.pop("flag", "")
-        x = fwd_returns(idx[ev["market"]], ev["date"]) if ev["market"] in idx else {}
-        for h in HORIZONS:
-            ev[f"r{h}"] = r.get(h, "")
-            ev[f"x{h}"] = round(r[h] - x[h], 2) if h in r and h in x else ""
+        if (ev.get("method_version") == METHOD_VERSION
+                and ev.get("r20") not in (None, "") and ev.get("x20") not in (None, "")):
+            continue
+        d0 = dt.date.fromisoformat(ev["date"])
+        series = stock.get_market_ohlcv(ymd(d0 - dt.timedelta(days=14)), ymd(today), ev["code"])["종가"]
+        if series.empty:
+            raise RuntimeError(f"Empty stock data: {ev['code']}")
+        absolute, excess, flag = aligned_returns(mapping(series), indexes[ev["market"]], ev["date"])
+        ev["flag"] = flag
+        ev["method_version"] = METHOD_VERSION
+        for horizon in HORIZONS:
+            ev[f"r{horizon}"] = absolute.get(horizon, "")
+            ev[f"x{horizon}"] = excess.get(horizon, "")
 
 
 def stats(events, key):
@@ -231,12 +235,17 @@ def run_one():
 
 def main():
     global CFG, EV
+    failures = []
     for c in EVENTS:
         CFG, EV = c, DATA / c["file"]
         try:
             run_one()
         except Exception as ex:
             print("[실패]", c["label"], ex)
+            failures.append(c["key"])
+
+    if failures:
+        raise RuntimeError("Event reports failed: " + ", ".join(failures))
 
 
 if __name__ == "__main__":
