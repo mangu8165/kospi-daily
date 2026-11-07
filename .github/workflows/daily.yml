@@ -20,6 +20,8 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
       - run: pip install -r requirements.txt
+      - name: Validate event calculations
+        run: python -m unittest discover -s tests -v
       - name: Collect
         env:
           DART_API_KEY: ${{ secrets.DART_API_KEY || secrets.K1 }}
@@ -28,7 +30,6 @@ jobs:
           TZ: Asia/Seoul
         run: python collector.py ${{ inputs.date }}
       - name: Event reports
-        continue-on-error: true
         env:
           DART_API_KEY: ${{ secrets.DART_API_KEY || secrets.K1 }}
           KRX_ID: ${{ secrets.KRX_ID }}
@@ -36,7 +37,6 @@ jobs:
           TZ: Asia/Seoul
         run: python event_report.py
       - name: Stock pages
-        continue-on-error: true
         run: python stock_pages.py
       - name: Commit data
         run: |
