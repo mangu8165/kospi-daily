@@ -17,7 +17,8 @@ START = dt.date(2026, 1, 1)
 HORIZONS = (1, 5, 20)
 SITE_URL = "https://mangu8165.github.io/kospi-daily"
 FIELDS = ["date", "code", "corp", "market", "title", "url"] + \
-         [f"r{h}" for h in HORIZONS] + [f"x{h}" for h in HORIZONS]
+         [f"r{h}" for h in HORIZONS] + [f"x{h}" for h in HORIZONS] + ["flag"]
+LIMIT = 0.30   # 한국 증시 일일 가격제한폭 ±30%: 이를 넘는 하루 변동 = 액면분할·감자·거래정지 등 데이터 왜곡
 ymd = lambda d: d.strftime("%Y%m%d")
 
 
@@ -66,6 +67,9 @@ def fwd_returns(series, base_date: str):
         return {}
     base_i = series.index.get_loc(s.index[-1])
     base = float(series.iloc[base_i])
+    win = series.iloc[base_i: base_i + HORIZONS[-1] + 1].astype(float)
+    if (win.pct_change().abs() > LIMIT + 0.005).any():
+        return {"flag": "가격제한폭 초과 변동(분할·감자 등 의심)"}
     res = {}
     for h in HORIZONS:
         if base_i + h < len(series):
@@ -81,7 +85,7 @@ def compute(events: list[dict], today: dt.date):
         except Exception as e:
             print("[지수 오류]", mk, e)
     for ev in events:
-        if ev.get(f"r{HORIZONS[-1]}") not in (None, ""):
+        if ev.get(f"r{HORIZONS[-1]}") not in (None, "") and "flag" in ev:
             continue                         # 이미 20일 수익률까지 확정된 건 건너뜀
         try:
             d0 = dt.date.fromisoformat(ev["date"])
@@ -89,6 +93,7 @@ def compute(events: list[dict], today: dt.date):
         except Exception as e:
             print("[주가 오류]", ev["corp"], e); continue
         r = fwd_returns(px, ev["date"])
+        ev["flag"] = r.pop("flag", "")
         x = fwd_returns(idx[ev["market"]], ev["date"]) if ev["market"] in idx else {}
         for h in HORIZONS:
             ev[f"r{h}"] = r.get(h, "")
@@ -96,10 +101,13 @@ def compute(events: list[dict], today: dt.date):
 
 
 def stats(events, key):
-    v = [float(e[key]) for e in events if e.get(key) not in (None, "")]
+    v = sorted(float(e[key]) for e in events if e.get(key) not in (None, "") and not e.get("flag"))
     if not v:
         return None
+    k = int(len(v) * 0.05)
+    tv = v[k: len(v) - k] or v
     return {"n": len(v), "avg": round(st.mean(v), 2), "med": round(st.median(v), 2),
+            "tavg": round(st.mean(tv), 2),
             "win": round(sum(1 for a in v if a > 0) / len(v) * 100, 1)}
 
 
@@ -124,6 +132,7 @@ def render(events, today):
     rows = "".join(
         f"<tr><td>H+{h}</td><td>{S[f'r{h}']['n'] if S[f'r{h}'] else 0}</td>"
         f"<td>{pct(S[f'r{h}']['avg']) if S[f'r{h}'] else '-'}</td>"
+        f"<td>{pct(S[f'r{h}']['tavg']) if S[f'r{h}'] else '-'}</td>"
         f"<td>{pct(S[f'r{h}']['med']) if S[f'r{h}'] else '-'}</td>"
         f"<td>{S[f'r{h}']['win'] if S[f'r{h}'] else '-'}%</td>"
         f"<td>{pct(S[f'x{h}']['avg']) if S[f'x{h}'] else '-'}</td>"
@@ -133,14 +142,15 @@ def render(events, today):
             f"<td>{pct(byM[m][h]['avg']) if byM[m][h] else '-'} <small>({byM[m][h]['n'] if byM[m][h] else 0}건)</small></td>"
             for h in HORIZONS) + "</tr>" for m in byM)
 
-    done = [x for x in events if x.get("x20") not in (None, "")]
+    done = [x for x in events if x.get("x20") not in (None, "") and not x.get("flag")]
+    flagged = [x for x in events if x.get("flag")]
     best = sorted(done, key=lambda x: float(x["x20"]), reverse=True)[:5]
     worst = sorted(done, key=lambda x: float(x["x20"]))[:5]
     li = lambda L: "".join(f"<li><b>{e(x['corp'])}</b> <small>{x['date']}</small> 시장 대비 {pct(x['x20'])}</li>" for x in L)
 
     recent = sorted(events, key=lambda x: x["date"], reverse=True)[:80]
     trows = "".join(
-        f"<tr><td>{x['date']}</td><td>{e(x['market'])}</td><td><a href='{x['url']}' rel='nofollow'>{e(x['corp'])}</a></td>"
+        f"<tr><td>{x['date']}</td><td>{e(x['market'])}</td><td><a href='{x['url']}' rel='nofollow'>{e(x['corp'])}</a>{' <small>※제외</small>' if x.get('flag') else ''}</td>"
         + "".join(f"<td>{pct(x.get(f'r{h}'))}</td>" for h in HORIZONS)
         + f"<td>{pct(x.get('x20'))}</td></tr>" for x in recent)
 
@@ -178,7 +188,8 @@ td:nth-child(-n+3){{text-align:left}}th{{background:#f4f4f4}}.up{{color:#c0392b}
 <p class="hero">{e(head)}</p>
 <p><small>{today.isoformat()} 업데이트 · 대상: 2026-01-01 이후 코스피·코스닥 '주식소각결정' 공시(정정 제외) · 기준가: 공시일 종가 · 초과수익률 = 종목 수익률 − 같은 기간 코스피/코스닥 지수 수익률</small></p>
 <h2>전체 성과</h2>
-<table><thead><tr><th>기간</th><th>건수</th><th>평균</th><th>중앙값</th><th>상승비율</th><th>시장 대비 평균</th><th>시장 이긴 비율</th></tr></thead><tbody>{rows}</tbody></table>
+<table><thead><tr><th>기간</th><th>건수</th><th>평균</th><th>절사평균*</th><th>중앙값</th><th>상승비율</th><th>시장 대비 평균</th><th>시장 이긴 비율</th></tr></thead><tbody>{rows}</tbody></table>
+<p><small>* 절사평균: 극단값 영향을 줄이기 위해 상·하위 5%를 제외한 평균. 가격제한폭(±30%)을 넘는 하루 변동이 있는 공시 {len(flagged)}건(액면분할·감자·거래정지 등 의심)은 통계에서 제외.</small></p>
 <h2>시장별 초과수익률</h2>
 <table><thead><tr><th>시장</th>{''.join(f'<th>H+{h}</th>' for h in HORIZONS)}</tr></thead><tbody>{mrows}</tbody></table>
 <h2>20거래일 성적 상위 5</h2><ol>{li(best)}</ol>
