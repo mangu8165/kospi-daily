@@ -1,6 +1,23 @@
 # 공시성적표
 
-> 한국 코스피·코스닥의 일일 주요 공시(DART)와 외국인·기관 순매수 상위(KRX)를 평일 장 마감 후 자동 집계하는 데이터 사이트. 매일 '주목 공시 TOP 5'를 규칙 기반으로 선정.
+> 한국 상장기업의 공시 이후 가격 수익률과 시장 대비 성과를 누적 집계하는 서비스.
 
-## 데이터
-- [2026-11-06](https://mangu8165.github.io/kospi-daily/2026-11-06.html): HTML, 원본 JSON은 https://mangu8165.github.io/kospi-daily/2026-11-06.json
+## 범위와 해석
+- 대상: 코스피·코스닥의 자사주 소각 및 유상증자 공시. 각 페이지의 집계 범위와 갱신일을 확인할 수 있다.
+- 기간: 공시일 종가 기준 1·5·20시장 거래일 후. 공시 시각을 반영한 매매 수익률이나 공시의 인과 효과가 아니다.
+- 단위: 가격 수익률은 %, 지수 수익률과의 차이는 %p. 전체 공시 수와 기간별 유효 표본 수는 다르다.
+- 출처: 금융감독원 DART와 KRX 자료. 정정·취소·가격 조정과 반복 공시의 한계는 계산 방법 페이지에 설명한다.
+- 과거 표본의 관측 결과이며 미래 수익률을 보장하지 않는다.
+
+## 주요 자료
+- [사이트 소개](https://mangu8165.github.io/kospi-daily/about.html)
+- [계산 방법과 한계](https://mangu8165.github.io/kospi-daily/methodology.html)
+- [자사주 소각 성적표](https://mangu8165.github.io/kospi-daily/buyback.html)
+- [유상증자 성적표](https://mangu8165.github.io/kospi-daily/rights.html)
+- [종목명·코드 검색](https://mangu8165.github.io/kospi-daily/stock/index.html)
+- [소각 공시별 집계 원자료](https://mangu8165.github.io/kospi-daily/buyback.json)
+- [유상증자 공시별 집계 원자료](https://mangu8165.github.io/kospi-daily/rights.json)
+- [사이트맵](https://mangu8165.github.io/kospi-daily/sitemap.xml)
+
+## 최근 일일 자료
+- [2026-11-06 공시·수급](https://mangu8165.github.io/kospi-daily/2026-11-06.html): 집계 JSON https://mangu8165.github.io/kospi-daily/2026-11-06.json
