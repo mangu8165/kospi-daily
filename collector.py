@@ -245,6 +245,8 @@ def build_index():
         "<meta name='viewport' content='width=device-width,initial-scale=1'></head>"
         f"<body><h1>{SITE_NAME}</h1><p>평일 장 마감 후 DART 공시와 KRX 투자자별 수급을 자동 집계합니다.</p>"
         f"<p><b><a href='buyback.html'>📊 자사주 소각 공시 성적표 (2026) — 발표 후 주가는 정말 올랐을까?</a></b></p>"
+        f"<p><b><a href='rights.html'>📉 유상증자 공시 성적표 (2026) — 유증 맞으면 주가는 얼마나 빠질까?</a></b></p>"
+        f"<p><a href='stock/index.html'>종목별 공시 이력 보기</a></p>"
         f"<ul>{links}</ul></body></html>", encoding="utf-8")
     (OUT / "llms.txt").write_text(
         f"# {SITE_NAME}\n\n> 한국 코스피·코스닥의 일일 주요 공시(DART)와 외국인·기관 순매수 상위(KRX)를 "
