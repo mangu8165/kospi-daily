@@ -9,6 +9,7 @@ from pathlib import Path
 import requests
 from pykrx import stock
 from event_returns import aligned_returns, METHOD_VERSION
+from event_design import decorate
 
 DART_KEY = os.environ.get("DART_API_KEY", "")
 ROOT = Path(__file__).parent
@@ -186,7 +187,7 @@ def render(events, today):
           "distribution": {"@type": "DataDownload", "encodingFormat": "application/json",
                            "contentUrl": f"{SITE_URL}/{CFG['json']}"}}
 
-    return f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+    return decorate(f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{L} 공시 성적표 2026 — 발표 후 주가 1일·5일·20일 수익률</title>
 <meta name="description" content="{e(head)}. 코스피·코스닥 {CFG["kw"]} 공시 전수 집계, 시장 대비 초과수익률.">
@@ -210,7 +211,7 @@ td:nth-child(-n+3){{text-align:left}}th{{background:#f4f4f4}}.up{{color:#c0392b}
 <h2>최근 {L} 공시 {len(recent)}건</h2>
 <table><thead><tr><th>공시일</th><th>시장</th><th>종목</th>{''.join(f'<th>H+{h}</th>' for h in HORIZONS)}<th>H+20 시장대비</th></tr></thead><tbody>{trows}</tbody></table>
 <p><small>과거 성과가 미래 수익을 보장하지 않으며, 본 페이지는 공개 데이터를 자동 집계한 정보 제공용으로 투자 권유가 아닙니다. 원본 데이터: <a href="{CFG['json']}">{CFG['json']}</a></small></p>
-<p><a href="buyback.html">자사주 소각 성적표</a> · <a href="rights.html">유상증자 성적표</a> · <a href="index.html">홈으로</a></p></body></html>"""
+<p><a href="buyback.html">자사주 소각 성적표</a> · <a href="rights.html">유상증자 성적표</a> · <a href="index.html">홈으로</a></p></body></html>""", L, S, n, today, CFG["key"])
 
 
 def run_one():
