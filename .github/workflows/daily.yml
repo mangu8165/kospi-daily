@@ -23,6 +23,8 @@ jobs:
       - name: Collect
         env:
           DART_API_KEY: ${{ secrets.DART_API_KEY || secrets.K1 }}
+          KRX_ID: ${{ secrets.KRX_ID }}
+          KRX_PW: ${{ secrets.KRX_PW }}
           TZ: Asia/Seoul
         run: python collector.py ${{ inputs.date }}
       - name: Commit data
