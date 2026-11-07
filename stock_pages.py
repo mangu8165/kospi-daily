@@ -1,3 +1,4 @@
+from site_design import site_page
 """
 종목별 페이지 자동 생성 (out/stock/{코드}.html) + 사이트맵 전체 재생성
 - 자사주 소각 공시 이력과 공시 후 수익률 (data/buyback_events.csv)
@@ -11,7 +12,7 @@ ROOT = Path(__file__).parent
 OUT, DATA = ROOT / "out", ROOT / "data"
 SD = OUT / "stock"
 SITE_URL = "https://mangu8165.github.io/kospi-daily"
-SITE_NAME = "코스피 데일리 데이터"
+SITE_NAME = "공시성적표"
 e = html.escape
 
 
@@ -22,11 +23,11 @@ def read(p):
         return list(csv.DictReader(f))
 
 
-def pct(v):
+def pct(v, unit="%"):
     if v in (None, ""):
         return "<span class='na'>-</span>"
     v = float(v); c = "up" if v > 0 else "dn" if v < 0 else ""
-    return f"<span class='{c}'>{v:+.2f}%</span>"
+    return f"<span class='{c}'>{v:+.2f}{unit}</span>"
 
 
 CSS = """body{font-family:system-ui,sans-serif;max-width:900px;margin:auto;padding:16px;line-height:1.55}
@@ -38,11 +39,11 @@ th{background:#f4f4f4}.up{color:#c0392b}.dn{color:#2463eb}.na{color:#aaa}small{c
 def ev_table(rows):
     return ("<table><thead><tr><th>공시일</th><th>공시</th><th>H+1</th><th>H+5</th><th>H+20</th><th>H+20 시장대비</th></tr></thead><tbody>"
             + "".join(f"<tr><td>{x['date']}</td><td><a href='{x['url']}' rel='nofollow'>{e(x['title'])}</a></td>"
-                      f"<td>{pct(x.get('r1'))}</td><td>{pct(x.get('r5'))}</td><td>{pct(x.get('r20'))}</td><td>{pct(x.get('x20'))}</td></tr>"
+                      f"<td>{pct(x.get('r1'))}</td><td>{pct(x.get('r5'))}</td><td>{pct(x.get('r20'))}</td><td>{pct(x.get('x20'), '%p')}</td></tr>"
                       for x in sorted(rows, key=lambda x: x['date'], reverse=True)) + "</tbody></table>")
 
 
-def page(code, corp, market, bb, hist, today, rt=()):
+def _page(code, corp, market, bb, hist, today, rt=()):
     bb = sorted(bb, key=lambda x: x["date"], reverse=True)
     hist = sorted(hist, key=lambda x: x["date"], reverse=True)[:40]
     n = len(bb)
@@ -68,7 +69,7 @@ def page(code, corp, market, bb, hist, today, rt=()):
 
     bb_rows = "".join(
         f"<tr><td>{x['date']}</td><td><a href='{x['url']}' rel='nofollow'>{e(x['title'])}</a></td>"
-        f"<td>{pct(x.get('r1'))}</td><td>{pct(x.get('r5'))}</td><td>{pct(x.get('r20'))}</td><td>{pct(x.get('x20'))}</td></tr>"
+        f"<td>{pct(x.get('r1'))}</td><td>{pct(x.get('r5'))}</td><td>{pct(x.get('r20'))}</td><td>{pct(x.get('x20'), '%p')}</td></tr>"
         for x in bb)
     h_rows = "".join(
         f"<tr><td>{x['date']}</td><td>{e(x['category'])}</td>"
@@ -100,6 +101,10 @@ def page(code, corp, market, bb, hist, today, rt=()):
 </body></html>"""
 
 
+def page(code, corp, market, bb, hist, today, rt=()):
+    return site_page(_page(code, corp, market, bb, hist, today, rt), "stocks", depth=1)
+
+
 def main():
     today = dt.date.today().isoformat()
     SD.mkdir(parents=True, exist_ok=True)
@@ -125,7 +130,11 @@ def main():
         encoding="utf-8")
 
     # 사이트맵 전체 재생성 (날짜 페이지 + 성적표 + 종목 페이지)
+    index_path = SD / "index.html"
+    index_path.write_text(site_page(index_path.read_text(encoding="utf-8"), "stocks", depth=1, search=True), encoding="utf-8")
+
     urls = [f"{SITE_URL}/", f"{SITE_URL}/buyback.html", f"{SITE_URL}/rights.html", f"{SITE_URL}/stock/index.html"]
+    urls += [f"{SITE_URL}/about.html", f"{SITE_URL}/methodology.html"]
     urls += [f"{SITE_URL}/{p.name}" for p in sorted(OUT.glob("????-??-??.html"), reverse=True)]
     urls += [f"{SITE_URL}/stock/{c}.html" for c, _ in items]
     (OUT / "sitemap.xml").write_text(

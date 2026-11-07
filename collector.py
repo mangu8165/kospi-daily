@@ -1,3 +1,4 @@
+from site_design import site_page, home, write_info_pages
 """
 코스피/코스닥 일일 데이터 수집기 + 정적 페이지 생성기
 - DART: 주요 공시(자사주, 최대주주 변동, 유상증자, 공급계약 등) 유형별 정리
@@ -16,7 +17,7 @@ from pykrx import stock
 
 DART_KEY = os.environ.get("DART_API_KEY", "")
 OUT = Path(__file__).parent / "out"
-SITE_NAME = "코스피 데일리 데이터"   # 나중에 사이트명으로 변경
+SITE_NAME = "공시성적표"
 SITE_URL = "https://mangu8165.github.io/kospi-daily"     # 도메인 생기면 변경
 
 # 공시 분류 규칙: (카테고리, 보고서명에 포함된 키워드들)
@@ -164,7 +165,7 @@ def table(headers, rows):
     return f"<table><thead><tr>{h}</tr></thead><tbody>{b}</tbody></table>"
 
 
-def render(day_iso: str, disc: dict, flows: dict, picks: list[dict]) -> str:
+def _render(day_iso: str, disc: dict, flows: dict, picks: list[dict]) -> str:
     parts = [f"<h1>{day_iso} 코스피·코스닥 공시 및 수급 정리</h1>",
              f"<p class='sum'>{day_iso} 기준 주요 공시 {sum(len(v) for v in disc.values())}건, "
              "외국인·기관 순매수/순매도 상위 종목을 자동 집계했습니다. 출처: DART, KRX.</p>"]
@@ -236,18 +237,15 @@ th{{background:#f4f4f4}}.sum{{color:#555}}small{{color:#888}}
 <p><a href="buyback.html">자사주 소각 공시 성적표</a> · <a href="index.html">전체 날짜 목록</a></p></body></html>"""
 
 
+def render(day_iso, disc, flows, picks):
+    return site_page(_render(day_iso, disc, flows, picks), "daily")
+
+
 def build_index():
     days = sorted((p.stem for p in OUT.glob("????-??-??.html")), reverse=True)
     links = "".join(f"<li><a href='{d}.html'>{d} 공시·수급 정리</a></li>" for d in days)
-    (OUT / "index.html").write_text(
-        f"<!DOCTYPE html><html lang='ko'><head><meta charset='utf-8'><title>{SITE_NAME}</title>"
-        '<meta name="google-site-verification" content="r0BHadvVb10QC14jseTURbpsrr4WSv1gzHI2cIyJ-Go" />'
-        "<meta name='viewport' content='width=device-width,initial-scale=1'></head>"
-        f"<body><h1>{SITE_NAME}</h1><p>평일 장 마감 후 DART 공시와 KRX 투자자별 수급을 자동 집계합니다.</p>"
-        f"<p><b><a href='buyback.html'>📊 자사주 소각 공시 성적표 (2026) — 발표 후 주가는 정말 올랐을까?</a></b></p>"
-        f"<p><b><a href='rights.html'>📉 유상증자 공시 성적표 (2026) — 유증 맞으면 주가는 얼마나 빠질까?</a></b></p>"
-        f"<p><a href='stock/index.html'>종목별 공시 이력 보기</a></p>"
-        f"<ul>{links}</ul></body></html>", encoding="utf-8")
+    (OUT / "index.html").write_text(home(days, '<meta name="google-site-verification" content="r0BHadvVb10QC14jseTURbpsrr4WSv1gzHI2cIyJ-Go" />'), encoding="utf-8")
+    write_info_pages(OUT)
     (OUT / "llms.txt").write_text(
         f"# {SITE_NAME}\n\n> 한국 코스피·코스닥의 일일 주요 공시(DART)와 외국인·기관 순매수 상위(KRX)를 "
         "평일 장 마감 후 자동 집계하는 데이터 사이트. 매일 '주목 공시 TOP 5'를 규칙 기반으로 선정.\n\n"
