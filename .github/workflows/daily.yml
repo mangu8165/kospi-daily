@@ -38,6 +38,8 @@ jobs:
         run: python event_report.py
       - name: Stock pages
         run: python stock_pages.py
+      - name: Validate generated site
+        run: python site_quality.py
       - name: Commit data
         run: |
           git config user.name "bot"; git config user.email "bot@users.noreply.github.com"
