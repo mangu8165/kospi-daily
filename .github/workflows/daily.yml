@@ -27,6 +27,14 @@ jobs:
           KRX_PW: ${{ secrets.KRX_PW }}
           TZ: Asia/Seoul
         run: python collector.py ${{ inputs.date }}
+      - name: Buyback report
+        continue-on-error: true
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY || secrets.K1 }}
+          KRX_ID: ${{ secrets.KRX_ID }}
+          KRX_PW: ${{ secrets.KRX_PW }}
+          TZ: Asia/Seoul
+        run: python buyback_report.py
       - name: Commit data
         run: |
           git config user.name "bot"; git config user.email "bot@users.noreply.github.com"
