@@ -1,0 +1,1894 @@
+{
+ "date": "2026-11-06",
+ "disclosures": {
+  "자사주 매입·소각": [
+   {
+    "corp": "KTcs",
+    "code": "058850",
+    "market": "코스피",
+    "title": "주식소각결정",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800829"
+   },
+   {
+    "corp": "나노신소재",
+    "code": "121600",
+    "market": "코스닥",
+    "title": "주요사항보고서(자기주식처분결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000335"
+   },
+   {
+    "corp": "삐아",
+    "code": "451250",
+    "market": "코스닥",
+    "title": "주식소각결정",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900599"
+   },
+   {
+    "corp": "삼양식품",
+    "code": "003230",
+    "market": "코스피",
+    "title": "주식소각결정",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800567"
+   },
+   {
+    "corp": "한화엔진",
+    "code": "082740",
+    "market": "코스피",
+    "title": "주요사항보고서(자기주식취득결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000185"
+   },
+   {
+    "corp": "현대지에프홀딩스",
+    "code": "005440",
+    "market": "코스피",
+    "title": "주식소각결정",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800468"
+   },
+   {
+    "corp": "동운아나텍",
+    "code": "094170",
+    "market": "코스닥",
+    "title": "주요사항보고서(자기주식취득신탁계약체결결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000141"
+   },
+   {
+    "corp": "한화에어로스페이스",
+    "code": "012450",
+    "market": "코스피",
+    "title": "주요사항보고서(자기주식취득결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000139"
+   },
+   {
+    "corp": "에코캡",
+    "code": "128540",
+    "market": "코스닥",
+    "title": "주요사항보고서(자기주식취득신탁계약체결결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000091"
+   },
+   {
+    "corp": "아가방컴퍼니",
+    "code": "013990",
+    "market": "코스닥",
+    "title": "주요사항보고서(자기주식취득신탁계약해지결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000045"
+   }
+  ],
+  "최대주주·지분 변동": [
+   {
+    "corp": "씨씨에스",
+    "code": "066790",
+    "market": "코스닥",
+    "title": "최대주주변경",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106901024"
+   },
+   {
+    "corp": "씨씨에스",
+    "code": "066790",
+    "market": "코스닥",
+    "title": "최대주주변경을수반하는주식양수도계약해제ㆍ취소등",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106901023"
+   },
+   {
+    "corp": "래블업",
+    "code": "0147B0",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000475"
+   },
+   {
+    "corp": "KT지니뮤직",
+    "code": "043610",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000473"
+   },
+   {
+    "corp": "KT지니뮤직",
+    "code": "043610",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000472"
+   },
+   {
+    "corp": "컴투스엔",
+    "code": "291230",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000469"
+   },
+   {
+    "corp": "폴라리스우노",
+    "code": "114630",
+    "market": "코스닥",
+    "title": "[기재정정]주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000465"
+   },
+   {
+    "corp": "컴투스엔",
+    "code": "291230",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000464"
+   },
+   {
+    "corp": "서부T&D",
+    "code": "006730",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000461"
+   },
+   {
+    "corp": "한국피아이엠",
+    "code": "448900",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000450"
+   },
+   {
+    "corp": "서부T&D",
+    "code": "006730",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000448"
+   },
+   {
+    "corp": "엔키AX",
+    "code": "134580",
+    "market": "코스닥",
+    "title": "[기재정정]주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000447"
+   },
+   {
+    "corp": "윙스풋",
+    "code": "335870",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등거래계획보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000445"
+   },
+   {
+    "corp": "서부T&D",
+    "code": "006730",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000444"
+   },
+   {
+    "corp": "큐브엔터",
+    "code": "182360",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000441"
+   },
+   {
+    "corp": "삼성전자",
+    "code": "005930",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000440"
+   },
+   {
+    "corp": "SNT모티브",
+    "code": "064960",
+    "market": "코스피",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000439"
+   },
+   {
+    "corp": "폴라리스AI",
+    "code": "039980",
+    "market": "코스닥",
+    "title": "[기재정정]주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000437"
+   },
+   {
+    "corp": "SNT모티브",
+    "code": "064960",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000436"
+   },
+   {
+    "corp": "폴라리스AI",
+    "code": "039980",
+    "market": "코스닥",
+    "title": "[기재정정]주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000433"
+   },
+   {
+    "corp": "펌텍코리아",
+    "code": "251970",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(약식)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000431"
+   },
+   {
+    "corp": "KG모빌리티플랫폼",
+    "code": "381970",
+    "market": "코스피",
+    "title": "[기재정정]임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000427"
+   },
+   {
+    "corp": "블루엠텍",
+    "code": "439580",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000426"
+   },
+   {
+    "corp": "폴라리스AI",
+    "code": "039980",
+    "market": "코스닥",
+    "title": "[기재정정]최대주주변경을수반하는주식양수도계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900890"
+   },
+   {
+    "corp": "FSN",
+    "code": "214270",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000422"
+   },
+   {
+    "corp": "블루엠텍",
+    "code": "439580",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000421"
+   },
+   {
+    "corp": "SIMPAC",
+    "code": "009160",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000419"
+   },
+   {
+    "corp": "엔키AX",
+    "code": "134580",
+    "market": "코스닥",
+    "title": "[기재정정]임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000416"
+   },
+   {
+    "corp": "티플랙스",
+    "code": "081150",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000415"
+   },
+   {
+    "corp": "티엔엔터테인먼트",
+    "code": "131100",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000414"
+   },
+   {
+    "corp": "대원",
+    "code": "007680",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000413"
+   },
+   {
+    "corp": "KG모빌리티플랫폼",
+    "code": "381970",
+    "market": "코스피",
+    "title": "[기재정정]주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000411"
+   },
+   {
+    "corp": "삼성전자",
+    "code": "005930",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000410"
+   },
+   {
+    "corp": "FSN",
+    "code": "214270",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000407"
+   },
+   {
+    "corp": "나노씨엠에스",
+    "code": "247660",
+    "market": "코스닥",
+    "title": "[기재정정]주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000403"
+   },
+   {
+    "corp": "에이루트",
+    "code": "096690",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000400"
+   },
+   {
+    "corp": "프로티아",
+    "code": "303360",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000398"
+   },
+   {
+    "corp": "한국토지신탁",
+    "code": "034830",
+    "market": "코스피",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000397"
+   },
+   {
+    "corp": "헥토파이낸셜",
+    "code": "234340",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000395"
+   },
+   {
+    "corp": "한국토지신탁",
+    "code": "034830",
+    "market": "코스피",
+    "title": "[기재정정]주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000394"
+   },
+   {
+    "corp": "HD건설기계",
+    "code": "267270",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000391"
+   },
+   {
+    "corp": "SKC",
+    "code": "011790",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000389"
+   },
+   {
+    "corp": "신화콘텍",
+    "code": "187270",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000388"
+   },
+   {
+    "corp": "엠투엔",
+    "code": "033310",
+    "market": "코스닥",
+    "title": "[기재정정]최대주주변경을수반하는주식담보제공계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900833"
+   },
+   {
+    "corp": "에코글로우",
+    "code": "159910",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000386"
+   },
+   {
+    "corp": "서진시스템",
+    "code": "178320",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000380"
+   },
+   {
+    "corp": "뉴온",
+    "code": "123840",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000377"
+   },
+   {
+    "corp": "부국증권",
+    "code": "001270",
+    "market": "코스피",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000370"
+   },
+   {
+    "corp": "강원에너지",
+    "code": "114190",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000367"
+   },
+   {
+    "corp": "한중엔시에스",
+    "code": "107640",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(약식)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000366"
+   },
+   {
+    "corp": "상신이디피",
+    "code": "091580",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(약식)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000362"
+   },
+   {
+    "corp": "KSS해운",
+    "code": "044450",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000361"
+   },
+   {
+    "corp": "서진시스템",
+    "code": "178320",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(약식)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000359"
+   },
+   {
+    "corp": "대주전자재료",
+    "code": "078600",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(약식)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000357"
+   },
+   {
+    "corp": "HD한국조선해양",
+    "code": "009540",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000356"
+   },
+   {
+    "corp": "코츠테크놀로지",
+    "code": "448710",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000355"
+   },
+   {
+    "corp": "티씨케이",
+    "code": "064760",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(약식)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000352"
+   },
+   {
+    "corp": "서울식품공업",
+    "code": "004410",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000350"
+   },
+   {
+    "corp": "크리에이츠",
+    "code": "439270",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000349"
+   },
+   {
+    "corp": "에이비엘바이오",
+    "code": "298380",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000347"
+   },
+   {
+    "corp": "갤럭시아에스엠",
+    "code": "011420",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등거래계획보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000346"
+   },
+   {
+    "corp": "남성",
+    "code": "004270",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000343"
+   },
+   {
+    "corp": "크리에이츠",
+    "code": "439270",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000342"
+   },
+   {
+    "corp": "크리에이츠",
+    "code": "439270",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000340"
+   },
+   {
+    "corp": "다산솔루에타",
+    "code": "154040",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000337"
+   },
+   {
+    "corp": "남성",
+    "code": "004270",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000334"
+   },
+   {
+    "corp": "크리에이츠",
+    "code": "439270",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000333"
+   },
+   {
+    "corp": "백금T&A",
+    "code": "046310",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000331"
+   },
+   {
+    "corp": "나노씨엠에스",
+    "code": "247660",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000330"
+   },
+   {
+    "corp": "엔키AX",
+    "code": "134580",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000328"
+   },
+   {
+    "corp": "컴투스",
+    "code": "078340",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000326"
+   },
+   {
+    "corp": "TJ미디어",
+    "code": "032540",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000324"
+   },
+   {
+    "corp": "크리에이츠",
+    "code": "439270",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000323"
+   },
+   {
+    "corp": "고영",
+    "code": "098460",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(약식)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000320"
+   },
+   {
+    "corp": "크리에이츠",
+    "code": "439270",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000318"
+   },
+   {
+    "corp": "엠케이전자",
+    "code": "033160",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000317"
+   },
+   {
+    "corp": "디모아",
+    "code": "016670",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000315"
+   },
+   {
+    "corp": "하나기술",
+    "code": "299030",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000313"
+   },
+   {
+    "corp": "블루엠텍",
+    "code": "439580",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000311"
+   },
+   {
+    "corp": "다산솔루에타",
+    "code": "154040",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000310"
+   },
+   {
+    "corp": "크리에이츠",
+    "code": "439270",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000309"
+   },
+   {
+    "corp": "iM금융지주",
+    "code": "139130",
+    "market": "코스피",
+    "title": "주식등의대량보유상황보고서(약식)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000307"
+   },
+   {
+    "corp": "다산솔루에타",
+    "code": "154040",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000306"
+   },
+   {
+    "corp": "에이프로젠",
+    "code": "007460",
+    "market": "코스피",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000303"
+   },
+   {
+    "corp": "아이비김영",
+    "code": "339950",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000302"
+   },
+   {
+    "corp": "미래에셋증권",
+    "code": "006800",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000300"
+   },
+   {
+    "corp": "엔키AX",
+    "code": "134580",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000298"
+   },
+   {
+    "corp": "대한약품",
+    "code": "023910",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000294"
+   },
+   {
+    "corp": "엔투텍",
+    "code": "227950",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(약식)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000289"
+   },
+   {
+    "corp": "알루코",
+    "code": "001780",
+    "market": "코스피",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000284"
+   },
+   {
+    "corp": "케이씨씨",
+    "code": "002380",
+    "market": "코스피",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000280"
+   },
+   {
+    "corp": "동아에스티",
+    "code": "170900",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000278"
+   },
+   {
+    "corp": "삼양패키징",
+    "code": "272550",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000276"
+   },
+   {
+    "corp": "동아제약",
+    "code": "000640",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000272"
+   },
+   {
+    "corp": "동아에스티",
+    "code": "170900",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000271"
+   },
+   {
+    "corp": "동아제약",
+    "code": "000640",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000270"
+   },
+   {
+    "corp": "동아제약",
+    "code": "000640",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000267"
+   },
+   {
+    "corp": "동아제약",
+    "code": "000640",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000266"
+   },
+   {
+    "corp": "옵티팜",
+    "code": "153710",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000265"
+   },
+   {
+    "corp": "동아에스티",
+    "code": "170900",
+    "market": "코스피",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000264"
+   },
+   {
+    "corp": "에스티팜",
+    "code": "237690",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000263"
+   },
+   {
+    "corp": "동아제약",
+    "code": "000640",
+    "market": "코스피",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000262"
+   },
+   {
+    "corp": "지엔코",
+    "code": "065060",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000261"
+   },
+   {
+    "corp": "금강공업",
+    "code": "014280",
+    "market": "코스피",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000256"
+   },
+   {
+    "corp": "유니크",
+    "code": "011320",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000255"
+   },
+   {
+    "corp": "크레오에스지",
+    "code": "040350",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000254"
+   },
+   {
+    "corp": "시지트로닉스",
+    "code": "429270",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000237"
+   },
+   {
+    "corp": "아티스트스튜디오",
+    "code": "200350",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000232"
+   },
+   {
+    "corp": "아티스트스튜디오",
+    "code": "200350",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000216"
+   },
+   {
+    "corp": "프로티아",
+    "code": "303360",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000209"
+   },
+   {
+    "corp": "삼성전자",
+    "code": "005930",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000193"
+   },
+   {
+    "corp": "HD현대중공업",
+    "code": "329180",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000186"
+   },
+   {
+    "corp": "에코프로에이치엔",
+    "code": "383310",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000184"
+   },
+   {
+    "corp": "에코프로에이치엔",
+    "code": "383310",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000176"
+   },
+   {
+    "corp": "모비데이즈",
+    "code": "363260",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000175"
+   },
+   {
+    "corp": "프로티아",
+    "code": "303360",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000173"
+   },
+   {
+    "corp": "아이엠스팩1호",
+    "code": "0222E0",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(약식)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000172"
+   },
+   {
+    "corp": "모비데이즈",
+    "code": "363260",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000170"
+   },
+   {
+    "corp": "현대백화점",
+    "code": "069960",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등거래계획보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000164"
+   },
+   {
+    "corp": "GMI벤처",
+    "code": "019570",
+    "market": "코스닥",
+    "title": "[기재정정]최대주주변경을수반하는주식담보제공계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900477"
+   },
+   {
+    "corp": "대원강업",
+    "code": "000430",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등거래계획보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000158"
+   },
+   {
+    "corp": "HD현대마린엔진",
+    "code": "071970",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000155"
+   },
+   {
+    "corp": "금호건설",
+    "code": "002990",
+    "market": "코스피",
+    "title": "주식등의대량보유상황보고서(약식)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000143"
+   },
+   {
+    "corp": "HL만도",
+    "code": "204320",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000134"
+   },
+   {
+    "corp": "라온로보틱스",
+    "code": "232680",
+    "market": "코스닥",
+    "title": "[기재정정]임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000124"
+   },
+   {
+    "corp": "유라클",
+    "code": "088340",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000122"
+   },
+   {
+    "corp": "유라클",
+    "code": "088340",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000116"
+   },
+   {
+    "corp": "네패스아크",
+    "code": "330860",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(약식)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000101"
+   },
+   {
+    "corp": "삼성전자",
+    "code": "005930",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000100"
+   },
+   {
+    "corp": "삼성전자",
+    "code": "005930",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000098"
+   },
+   {
+    "corp": "지에프씨생명과학",
+    "code": "388610",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000097"
+   },
+   {
+    "corp": "지에프씨생명과학",
+    "code": "388610",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000096"
+   },
+   {
+    "corp": "아이엘",
+    "code": "307180",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000095"
+   },
+   {
+    "corp": "삼성전자",
+    "code": "005930",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000093"
+   },
+   {
+    "corp": "글로벌테크놀로지",
+    "code": "486510",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000092"
+   },
+   {
+    "corp": "프로티아",
+    "code": "303360",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000087"
+   },
+   {
+    "corp": "아이진",
+    "code": "185490",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000084"
+   },
+   {
+    "corp": "신흥",
+    "code": "004080",
+    "market": "코스피",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000083"
+   },
+   {
+    "corp": "아이진",
+    "code": "185490",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000082"
+   },
+   {
+    "corp": "에코캡",
+    "code": "128540",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(약식)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000079"
+   },
+   {
+    "corp": "영광",
+    "code": "359410",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000078"
+   },
+   {
+    "corp": "NEW",
+    "code": "160550",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000076"
+   },
+   {
+    "corp": "HD현대중공업",
+    "code": "329180",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000075"
+   },
+   {
+    "corp": "영광",
+    "code": "359410",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000074"
+   },
+   {
+    "corp": "영광",
+    "code": "359410",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000073"
+   },
+   {
+    "corp": "프로티아",
+    "code": "303360",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000066"
+   },
+   {
+    "corp": "지엔씨에너지",
+    "code": "119850",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(약식)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000065"
+   },
+   {
+    "corp": "산일전기",
+    "code": "062040",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000060"
+   },
+   {
+    "corp": "HD현대중공업",
+    "code": "329180",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000055"
+   },
+   {
+    "corp": "프로티아",
+    "code": "303360",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000049"
+   },
+   {
+    "corp": "아티스트스튜디오",
+    "code": "200350",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000044"
+   },
+   {
+    "corp": "라온로보틱스",
+    "code": "232680",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000040"
+   },
+   {
+    "corp": "가온전선",
+    "code": "000500",
+    "market": "코스피",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000032"
+   },
+   {
+    "corp": "더네이쳐홀딩스",
+    "code": "298540",
+    "market": "코스닥",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000031"
+   },
+   {
+    "corp": "KG스틸",
+    "code": "016380",
+    "market": "코스피",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000028"
+   },
+   {
+    "corp": "아이엠스팩1호",
+    "code": "0222E0",
+    "market": "코스닥",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000027"
+   },
+   {
+    "corp": "HD한국조선해양",
+    "code": "009540",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000024"
+   },
+   {
+    "corp": "삼성전자",
+    "code": "005930",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000022"
+   },
+   {
+    "corp": "롯데렌탈",
+    "code": "089860",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000007"
+   },
+   {
+    "corp": "롯데렌탈",
+    "code": "089860",
+    "market": "코스피",
+    "title": "주식등의대량보유상황보고서(일반)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000004"
+   },
+   {
+    "corp": "HD건설기계",
+    "code": "267270",
+    "market": "코스피",
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105000576"
+   }
+  ],
+  "유상증자·CB·BW": [
+   {
+    "corp": "모아데이타",
+    "code": "288980",
+    "market": "코스닥",
+    "title": "[기재정정]주요사항보고서(자기전환사채매도결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000478"
+   },
+   {
+    "corp": "루멘스바이오스",
+    "code": "038060",
+    "market": "코스닥",
+    "title": "[기재정정]주요사항보고서(전환사채권발행결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000466"
+   },
+   {
+    "corp": "프리티",
+    "code": "006490",
+    "market": "코스피",
+    "title": "[기재정정]주요사항보고서(유상증자결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000457"
+   },
+   {
+    "corp": "와이랩",
+    "code": "432430",
+    "market": "코스닥",
+    "title": "[기재정정]주요사항보고서(전환사채권발행결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000455"
+   },
+   {
+    "corp": "에피소드컴퍼니",
+    "code": "317530",
+    "market": "코스닥",
+    "title": "유상증자최종발행가액확정",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900962"
+   },
+   {
+    "corp": "에피소드컴퍼니",
+    "code": "317530",
+    "market": "코스닥",
+    "title": "[기재정정]주요사항보고서(유상증자결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000446"
+   },
+   {
+    "corp": "LS",
+    "code": "006260",
+    "market": "코스피",
+    "title": "유상증자또는주식관련사채등의발행결과(자율공시)(자회사의 주요경영사항)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800944"
+   },
+   {
+    "corp": "다이나믹디자인",
+    "code": "145210",
+    "market": "코스피",
+    "title": "[기재정정]주요사항보고서(유상증자결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000420"
+   },
+   {
+    "corp": "MSDI",
+    "code": "123010",
+    "market": "코스닥",
+    "title": "[기재정정]주요사항보고서(유상증자결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000424"
+   },
+   {
+    "corp": "상지건설",
+    "code": "042940",
+    "market": "코스닥",
+    "title": "유상증자또는주식관련사채등의청약결과(자율공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900919"
+   },
+   {
+    "corp": "셀피글로벌",
+    "code": "068940",
+    "market": "코스닥",
+    "title": "[기재정정]주요사항보고서(유상증자결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000408"
+   },
+   {
+    "corp": "다스코",
+    "code": "058730",
+    "market": "코스피",
+    "title": "유상증자또는주식관련사채등의발행결과(자율공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800856"
+   },
+   {
+    "corp": "블루산업개발",
+    "code": "006740",
+    "market": "코스피",
+    "title": "[기재정정]주요사항보고서(유상증자결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000314"
+   },
+   {
+    "corp": "아스트",
+    "code": "067390",
+    "market": "코스닥",
+    "title": "[기재정정]주요사항보고서(전환사채권발행결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000274"
+   },
+   {
+    "corp": "아스트",
+    "code": "067390",
+    "market": "코스닥",
+    "title": "[기재정정]주요사항보고서(전환사채권발행결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000297"
+   },
+   {
+    "corp": "아스트",
+    "code": "067390",
+    "market": "코스닥",
+    "title": "[기재정정]주요사항보고서(전환사채권발행결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000290"
+   },
+   {
+    "corp": "아스트",
+    "code": "067390",
+    "market": "코스닥",
+    "title": "[기재정정]주요사항보고서(전환사채권발행결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000249"
+   },
+   {
+    "corp": "태영건설",
+    "code": "009410",
+    "market": "코스피",
+    "title": "유상증자또는주식관련사채등의발행결과(자율공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800721"
+   },
+   {
+    "corp": "PS일렉트로닉스",
+    "code": "332570",
+    "market": "코스닥",
+    "title": "자기교환사채만기전취득결정              (제4회차)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900685"
+   },
+   {
+    "corp": "신테카바이오",
+    "code": "226330",
+    "market": "코스닥",
+    "title": "[기재정정]주요사항보고서(유상증자결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000242"
+   },
+   {
+    "corp": "LIG디펜스앤에어로스페이스",
+    "code": "079550",
+    "market": "코스피",
+    "title": "[기재정정]주요사항보고서(유상증자결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000234"
+   },
+   {
+    "corp": "진영",
+    "code": "285800",
+    "market": "코스닥",
+    "title": "주요사항보고서(자기전환사채만기전취득결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000169"
+   },
+   {
+    "corp": "NAVER",
+    "code": "035420",
+    "market": "코스피",
+    "title": "유상증자또는주식관련사채등의발행결과(자율공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800553"
+   },
+   {
+    "corp": "티씨머티리얼즈",
+    "code": "125020",
+    "market": "코스닥",
+    "title": "주요사항보고서(전환사채권발행결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000165"
+   },
+   {
+    "corp": "티씨머티리얼즈",
+    "code": "125020",
+    "market": "코스닥",
+    "title": "주요사항보고서(유상증자결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000157"
+   },
+   {
+    "corp": "씨이랩",
+    "code": "189330",
+    "market": "코스닥",
+    "title": "주요사항보고서(전환사채권발행결정)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000150"
+   },
+   {
+    "corp": "유티아이",
+    "code": "179900",
+    "market": "코스닥",
+    "title": "증권발행결과(자율공시)              (제3자배정 유상증자)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900373"
+   }
+  ],
+  "공급계약·수주": [
+   {
+    "corp": "디티앤씨알오",
+    "code": "383930",
+    "market": "코스닥",
+    "title": "[기재정정]단일판매ㆍ공급계약체결(자율공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106901019"
+   },
+   {
+    "corp": "야스",
+    "code": "255440",
+    "market": "코스닥",
+    "title": "[기재정정]단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900956"
+   },
+   {
+    "corp": "라온텍",
+    "code": "418420",
+    "market": "코스닥",
+    "title": "[기재정정]단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900875"
+   },
+   {
+    "corp": "라온텍",
+    "code": "418420",
+    "market": "코스닥",
+    "title": "[기재정정]단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900889"
+   },
+   {
+    "corp": "폴라리스AI",
+    "code": "039980",
+    "market": "코스닥",
+    "title": "[기재정정]단일판매ㆍ공급계약체결(자율공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900937"
+   },
+   {
+    "corp": "라온텍",
+    "code": "418420",
+    "market": "코스닥",
+    "title": "단일판매ㆍ공급계약해지",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900848"
+   },
+   {
+    "corp": "라온텍",
+    "code": "418420",
+    "market": "코스닥",
+    "title": "단일판매ㆍ공급계약해지",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900835"
+   },
+   {
+    "corp": "영화테크",
+    "code": "265560",
+    "market": "코스닥",
+    "title": "단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900811"
+   },
+   {
+    "corp": "삼성E&A",
+    "code": "028050",
+    "market": "코스피",
+    "title": "[기재정정]단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800758"
+   },
+   {
+    "corp": "남화토건",
+    "code": "091590",
+    "market": "코스닥",
+    "title": "[기재정정]단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900706"
+   },
+   {
+    "corp": "브리지텍",
+    "code": "064480",
+    "market": "코스닥",
+    "title": "단일판매ㆍ공급계약체결(자율공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900578"
+   },
+   {
+    "corp": "제일테크노스",
+    "code": "038010",
+    "market": "코스닥",
+    "title": "단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900551"
+   },
+   {
+    "corp": "진흥기업",
+    "code": "002780",
+    "market": "코스피",
+    "title": "[기재정정]단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800558"
+   },
+   {
+    "corp": "자이에스앤디",
+    "code": "317400",
+    "market": "코스피",
+    "title": "[기재정정]단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800496"
+   },
+   {
+    "corp": "중앙백신",
+    "code": "072020",
+    "market": "코스닥",
+    "title": "[기재정정]단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900485"
+   },
+   {
+    "corp": "원일티엔아이",
+    "code": "136150",
+    "market": "코스닥",
+    "title": "[기재정정]단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900478"
+   },
+   {
+    "corp": "HJ중공업",
+    "code": "097230",
+    "market": "코스피",
+    "title": "[기재정정]단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800466"
+   },
+   {
+    "corp": "E8",
+    "code": "418620",
+    "market": "코스닥",
+    "title": "단일판매ㆍ공급계약체결(자율공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900413"
+   },
+   {
+    "corp": "서한",
+    "code": "011370",
+    "market": "코스닥",
+    "title": "단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900344"
+   },
+   {
+    "corp": "HS화성",
+    "code": "002460",
+    "market": "코스피",
+    "title": "단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800304"
+   },
+   {
+    "corp": "HD한국조선해양",
+    "code": "009540",
+    "market": "코스피",
+    "title": "단일판매ㆍ공급계약체결(자회사의 주요경영사항)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800323"
+   },
+   {
+    "corp": "HD현대중공업",
+    "code": "329180",
+    "market": "코스피",
+    "title": "단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800310"
+   },
+   {
+    "corp": "AK홀딩스",
+    "code": "006840",
+    "market": "코스피",
+    "title": "단일판매ㆍ공급계약체결(자회사의 주요경영사항)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800279"
+   },
+   {
+    "corp": "케이지에이",
+    "code": "455180",
+    "market": "코스닥",
+    "title": "단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900190"
+   },
+   {
+    "corp": "수산인더스트리",
+    "code": "126720",
+    "market": "코스피",
+    "title": "[기재정정]단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800234"
+   },
+   {
+    "corp": "파두",
+    "code": "440110",
+    "market": "코스닥",
+    "title": "단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900228"
+   },
+   {
+    "corp": "계룡건설산업",
+    "code": "013580",
+    "market": "코스피",
+    "title": "단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800219"
+   },
+   {
+    "corp": "삼화네트웍스",
+    "code": "046390",
+    "market": "코스닥",
+    "title": "[기재정정]단일판매ㆍ공급계약체결",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900173"
+   }
+  ],
+  "실적 공시": [
+   {
+    "corp": "AP시스템",
+    "code": "265520",
+    "market": "코스닥",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900830"
+   },
+   {
+    "corp": "SK네트웍스",
+    "code": "001740",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800840"
+   },
+   {
+    "corp": "아바코",
+    "code": "083930",
+    "market": "코스닥",
+    "title": "영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900736"
+   },
+   {
+    "corp": "엑셀세라퓨틱스",
+    "code": "373110",
+    "market": "코스닥",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900711"
+   },
+   {
+    "corp": "아로마티카",
+    "code": "0015N0",
+    "market": "코스닥",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900727"
+   },
+   {
+    "corp": "신세계I&C",
+    "code": "035510",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800695"
+   },
+   {
+    "corp": "잉글우드랩",
+    "code": "950140",
+    "market": "코스닥",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900712"
+   },
+   {
+    "corp": "CJ CGV",
+    "code": "079160",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800724"
+   },
+   {
+    "corp": "SG세계물산",
+    "code": "004060",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800688"
+   },
+   {
+    "corp": "코스메카코리아",
+    "code": "241710",
+    "market": "코스닥",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900602"
+   },
+   {
+    "corp": "HS애드",
+    "code": "035000",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800671"
+   },
+   {
+    "corp": "진에어",
+    "code": "272450",
+    "market": "코스피",
+    "title": "영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800652"
+   },
+   {
+    "corp": "웹젠",
+    "code": "069080",
+    "market": "코스닥",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900615"
+   },
+   {
+    "corp": "삼양식품",
+    "code": "003230",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800605"
+   },
+   {
+    "corp": "씨젠",
+    "code": "096530",
+    "market": "코스닥",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900600"
+   },
+   {
+    "corp": "코스맥스엔비티",
+    "code": "222040",
+    "market": "코스닥",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900590"
+   },
+   {
+    "corp": "교촌에프앤비",
+    "code": "339770",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800611"
+   },
+   {
+    "corp": "강원랜드",
+    "code": "035250",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800609"
+   },
+   {
+    "corp": "롯데케미칼",
+    "code": "011170",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800601"
+   },
+   {
+    "corp": "쎌바이오텍",
+    "code": "049960",
+    "market": "코스닥",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900577"
+   },
+   {
+    "corp": "LIG디펜스앤에어로스페이스",
+    "code": "079550",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800588"
+   },
+   {
+    "corp": "신성이엔지",
+    "code": "011930",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800484"
+   },
+   {
+    "corp": "KTcs",
+    "code": "058850",
+    "market": "코스피",
+    "title": "영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800467"
+   },
+   {
+    "corp": "KTcs",
+    "code": "058850",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800464"
+   },
+   {
+    "corp": "한화엔진",
+    "code": "082740",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800463"
+   },
+   {
+    "corp": "금호석유화학",
+    "code": "011780",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800457"
+   },
+   {
+    "corp": "한국타이어앤테크놀로지",
+    "code": "161390",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800449"
+   },
+   {
+    "corp": "현대지에프홀딩스",
+    "code": "005440",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800399"
+   },
+   {
+    "corp": "씨에스윈드",
+    "code": "112610",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800395"
+   },
+   {
+    "corp": "바디텍메드",
+    "code": "206640",
+    "market": "코스닥",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900371"
+   },
+   {
+    "corp": "성광벤드",
+    "code": "014620",
+    "market": "코스닥",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900261"
+   },
+   {
+    "corp": "인터로조",
+    "code": "119610",
+    "market": "코스닥",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900251"
+   },
+   {
+    "corp": "코웨이",
+    "code": "021240",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800224"
+   },
+   {
+    "corp": "더즌",
+    "code": "462860",
+    "market": "코스닥",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900195"
+   },
+   {
+    "corp": "더즌",
+    "code": "462860",
+    "market": "코스닥",
+    "title": "영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900194"
+   },
+   {
+    "corp": "파마리서치",
+    "code": "214450",
+    "market": "코스닥",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900196"
+   },
+   {
+    "corp": "한국콜마",
+    "code": "161890",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800151"
+   },
+   {
+    "corp": "한국콜마",
+    "code": "161890",
+    "market": "코스피",
+    "title": "영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800125"
+   },
+   {
+    "corp": "롯데쇼핑",
+    "code": "023530",
+    "market": "코스피",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800080"
+   },
+   {
+    "corp": "씨어스",
+    "code": "458870",
+    "market": "코스닥",
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106900007"
+   }
+  ],
+  "배당": [
+   {
+    "corp": "메리츠금융지주",
+    "code": "138040",
+    "market": "코스피",
+    "title": "현금ㆍ현물배당결정(자회사의 주요경영사항)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800968"
+   },
+   {
+    "corp": "메리츠금융지주",
+    "code": "138040",
+    "market": "코스피",
+    "title": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정(자회사의 주요경영사항)",
+    "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106800959"
+   }
+  ]
+ },
+ "flows": {}
+}
