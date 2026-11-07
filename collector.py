@@ -17,17 +17,27 @@ from pykrx import stock
 DART_KEY = os.environ.get("DART_API_KEY", "")
 OUT = Path(__file__).parent / "out"
 SITE_NAME = "코스피 데일리 데이터"   # 나중에 사이트명으로 변경
-SITE_URL = "https://example.com"     # 도메인 생기면 변경
+SITE_URL = "https://mangu8165.github.io/kospi-daily"     # 도메인 생기면 변경
 
 # 공시 분류 규칙: (카테고리, 보고서명에 포함된 키워드들)
 CATEGORIES = [
     ("자사주 매입·소각", ["자기주식취득", "자기주식 취득", "주식소각", "자기주식처분"]),
-    ("최대주주·지분 변동", ["최대주주변경", "최대주주 변경", "주식등의대량보유", "임원ㆍ주요주주특정증권"]),
+    ("최대주주 변경", ["최대주주변경", "최대주주 변경"]),
+    ("5% 대량보유", ["주식등의대량보유"]),
     ("유상증자·CB·BW", ["유상증자", "전환사채", "신주인수권부사채", "교환사채"]),
     ("공급계약·수주", ["단일판매ㆍ공급계약", "단일판매·공급계약"]),
     ("실적 공시", ["영업(잠정)실적", "매출액또는손익구조"]),
     ("배당", ["현금ㆍ현물배당", "현금·현물배당"]),
+    ("임원·주요주주 지분", ["임원ㆍ주요주주특정증권", "임원·주요주주특정증권"]),
 ]
+
+# 주목도 점수: 카테고리 기본점 + 제목 키워드 가산
+BASE_SCORE = {"최대주주 변경": 9, "자사주 매입·소각": 7, "유상증자·CB·BW": 6,
+              "공급계약·수주": 6, "실적 공시": 5, "배당": 4, "5% 대량보유": 3,
+              "임원·주요주주 지분": 1}
+KEYWORD_BONUS = [("소각", 3), ("제3자배정", 3), ("최대주주변경", 2), ("영업(잠정)실적", 1),
+                 ("기재정정", -2), ("철회", 1), ("해지", 2), ("결정", 1)]
+HIDE_IN_MAIN = {"임원·주요주주 지분"}   # 본문에서는 접어서 표시
 
 
 def fetch_dart(day: str) -> list[dict]:
@@ -89,6 +99,62 @@ def fetch_flows(day: str, top: int = 15) -> dict:
     return res
 
 
+def score_all(disc: dict, flows: dict) -> list[dict]:
+    """공시마다 점수를 매기고, 같은 날 외국인·기관 순매수/순매도 상위면 가산."""
+    flow_tag = {}
+    for key, v in flows.items():
+        inv = key.split("_")[1]
+        for r in v.get("buy", []):
+            flow_tag.setdefault(r["code"], []).append(f"{inv} 순매수 상위({r['net_krw_eok']}억)")
+        for r in v.get("sell", []):
+            flow_tag.setdefault(r["code"], []).append(f"{inv} 순매도 상위({r['net_krw_eok']}억)")
+    out = []
+    for cat, lst in disc.items():
+        for x in lst:
+            sc = BASE_SCORE.get(cat, 0)
+            t = x["title"].replace(" ", "")
+            for kw, b in KEYWORD_BONUS:
+                if kw in t:
+                    sc += b
+            tags = flow_tag.get(x["code"], [])
+            if tags:
+                sc += 3
+            out.append({**x, "category": cat, "score": sc, "flow": tags})
+    out.sort(key=lambda r: r["score"], reverse=True)
+    return out
+
+
+def top_picks(scored: list[dict], n: int = 5) -> list[dict]:
+    seen, res = set(), []
+    for r in scored:
+        if r["category"] in HIDE_IN_MAIN or r["corp"] in seen:
+            continue
+        seen.add(r["corp"]); res.append(r)
+        if len(res) == n:
+            break
+    return res
+
+
+def save_history(day_iso: str, scored: list[dict]):
+    """공시 후 주가 반응 통계를 위해 이력 누적 (data/history.csv)."""
+    import csv
+    hp = Path(__file__).parent / "data" / "history.csv"
+    hp.parent.mkdir(exist_ok=True)
+    new = not hp.exists()
+    old = set()
+    if not new:
+        with hp.open(encoding="utf-8") as f:
+            old = {(r["date"], r["url"]) for r in csv.DictReader(f)}
+    with hp.open("a", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        if new:
+            w.writerow(["date", "code", "corp", "market", "category", "score", "title", "url"])
+        for r in scored:
+            if r["code"] and (day_iso, r["url"]) not in old:
+                w.writerow([day_iso, r["code"], r["corp"], r["market"], r["category"],
+                            r["score"], r["title"], r["url"]])
+
+
 # ---------- HTML ----------
 e = html.escape
 
@@ -98,19 +164,41 @@ def table(headers, rows):
     return f"<table><thead><tr>{h}</tr></thead><tbody>{b}</tbody></table>"
 
 
-def render(day_iso: str, disc: dict, flows: dict) -> str:
+def render(day_iso: str, disc: dict, flows: dict, picks: list[dict]) -> str:
     parts = [f"<h1>{day_iso} 코스피·코스닥 공시 및 수급 정리</h1>",
              f"<p class='sum'>{day_iso} 기준 주요 공시 {sum(len(v) for v in disc.values())}건, "
              "외국인·기관 순매수/순매도 상위 종목을 자동 집계했습니다. 출처: DART, KRX.</p>"]
+
+    if picks:
+        parts.append("<h2>오늘의 주목 공시 TOP 5</h2><ol class='top'>")
+        for r in picks:
+            fl = f" <span class='flow'>· {e(', '.join(r['flow']))}</span>" if r["flow"] else ""
+            parts.append(f"<li><b>{e(r['corp'])}</b> <small>{e(r['code'])} · {e(r['category'])}</small><br>"
+                         f"<a href='{r['url']}' rel='nofollow'>{e(r['title'])}</a>{fl}</li>")
+        parts.append("</ol><p><small>점수 = 공시 유형 + 핵심 키워드(소각, 제3자배정 등) + 같은 날 외국인·기관 수급 상위 여부. 투자 권유 아님.</small></p>")
+
+    faq = []
+    for key, v in flows.items():
+        if v.get("buy"):
+            mk, inv = key.split("_"); b = v["buy"][0]
+            faq.append((f"{day_iso} {mk} {inv} 순매수 1위 종목은?", f"{b['name']}({b['code']}), {b['net_krw_eok']}억 원"))
+    if picks:
+        faq.append((f"{day_iso} 가장 주목할 공시는?", f"{picks[0]['corp']} — {picks[0]['title']}"))
+    if faq:
+        parts.append("<h2>한눈에 보기</h2><dl>" + "".join(f"<dt>{e(q)}</dt><dd>{e(a)}</dd>" for q, a in faq) + "</dl>")
 
     parts.append("<h2>주요 공시</h2>")
     for cat, lst in disc.items():
         if not lst:
             continue
+        if cat in HIDE_IN_MAIN:
+            parts.append(f"<details><summary>{e(cat)} ({len(lst)}건) 펼치기</summary>")
         parts.append(f"<h3>{e(cat)} ({len(lst)}건)</h3>")
         parts.append(table(["시장", "종목", "공시"],
             [[e(x["market"]), f"{e(x['corp'])} <small>{e(x['code'])}</small>",
               f"<a href='{x['url']}' rel='nofollow'>{e(x['title'])}</a>"] for x in lst]))
+        if cat in HIDE_IN_MAIN:
+            parts.append("</details>")
 
     parts.append("<h2>투자자별 순매수 상위 (단위: 억원)</h2>")
     for key, v in flows.items():
@@ -129,14 +217,20 @@ def render(day_iso: str, disc: dict, flows: dict) -> str:
           "distribution": {"@type": "DataDownload", "encodingFormat": "application/json",
                            "contentUrl": f"{SITE_URL}/{day_iso}.json"}}
 
+    ld_faq = {"@context": "https://schema.org", "@type": "FAQPage",
+              "mainEntity": [{"@type": "Question", "name": q,
+                              "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}
+
     return f"""<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{day_iso} 코스피 공시·외국인 기관 수급 정리 | {SITE_NAME}</title>
 <meta name="description" content="{day_iso} 자사주 매입, 최대주주 변동, 유상증자, 공급계약 공시와 외국인·기관 순매수 상위 종목.">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<script type="application/ld+json">{json.dumps(ld_faq, ensure_ascii=False)}</script>
 <style>body{{font-family:system-ui,sans-serif;max-width:900px;margin:auto;padding:16px;line-height:1.5}}
 table{{border-collapse:collapse;width:100%;margin:8px 0 20px}}th,td{{border:1px solid #ddd;padding:6px;font-size:14px}}
-th{{background:#f4f4f4}}.sum{{color:#555}}small{{color:#888}}</style></head><body>
+th{{background:#f4f4f4}}.sum{{color:#555}}small{{color:#888}}
+.top li{{margin:8px 0}}.flow{{color:#c0392b;font-size:13px}}dt{{font-weight:600;margin-top:6px}}dd{{margin:0 0 4px 0}}</style></head><body>
 {''.join(parts)}
 <p><small>본 페이지는 공개 데이터를 자동 집계한 정보 제공용이며 투자 권유가 아닙니다.</small></p>
 <p><a href="index.html">전체 날짜 목록</a></p></body></html>"""
@@ -147,7 +241,19 @@ def build_index():
     links = "".join(f"<li><a href='{d}.html'>{d} 공시·수급 정리</a></li>" for d in days)
     (OUT / "index.html").write_text(
         f"<!DOCTYPE html><html lang='ko'><head><meta charset='utf-8'><title>{SITE_NAME}</title></head>"
-        f"<body><h1>{SITE_NAME}</h1><ul>{links}</ul></body></html>", encoding="utf-8")
+        f"<body><h1>{SITE_NAME}</h1><p>평일 장 마감 후 DART 공시와 KRX 투자자별 수급을 자동 집계합니다.</p>"
+        f"<ul>{links}</ul></body></html>", encoding="utf-8")
+    (OUT / "llms.txt").write_text(
+        f"# {SITE_NAME}\n\n> 한국 코스피·코스닥의 일일 주요 공시(DART)와 외국인·기관 순매수 상위(KRX)를 "
+        "평일 장 마감 후 자동 집계하는 데이터 사이트. 매일 '주목 공시 TOP 5'를 규칙 기반으로 선정.\n\n"
+        "## 데이터\n" + "".join(f"- [{d}]({SITE_URL}/{d}.html): HTML, 원본 JSON은 {SITE_URL}/{d}.json\n" for d in days[:30]),
+        encoding="utf-8")
+    (OUT / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+        + f"<url><loc>{SITE_URL}/</loc></url>"
+        + "".join(f"<url><loc>{SITE_URL}/{d}.html</loc><lastmod>{d}</lastmod></url>" for d in days)
+        + "</urlset>", encoding="utf-8")
+    (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
 
 
 def main():
@@ -158,10 +264,13 @@ def main():
     flows = fetch_flows(day)
     if not flows and not any(disc.values()):
         print("데이터 없음 (휴장일?)"); return
+    scored = score_all(disc, flows)
+    picks = top_picks(scored)
+    save_history(day_iso, scored)
     (OUT / f"{day_iso}.json").write_text(
-        json.dumps({"date": day_iso, "disclosures": disc, "flows": flows}, ensure_ascii=False, indent=1),
-        encoding="utf-8")
-    (OUT / f"{day_iso}.html").write_text(render(day_iso, disc, flows), encoding="utf-8")
+        json.dumps({"date": day_iso, "top5": picks, "disclosures": disc, "flows": flows},
+                   ensure_ascii=False, indent=1), encoding="utf-8")
+    (OUT / f"{day_iso}.html").write_text(render(day_iso, disc, flows, picks), encoding="utf-8")
     build_index()
     print("완료:", OUT / f"{day_iso}.html")
 
