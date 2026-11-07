@@ -3,6 +3,10 @@ on:
   schedule:
     - cron: "30 8 * * 1-5"   # 평일 17:30 KST (UTC 08:30)
   workflow_dispatch:
+    inputs:
+      date:
+        description: "YYYYMMDD (비우면 오늘)"
+        required: false
 permissions:
   contents: write
   pages: write
@@ -20,7 +24,7 @@ jobs:
         env:
           DART_API_KEY: ${{ secrets.DART_API_KEY }}
           TZ: Asia/Seoul
-        run: python collector.py
+        run: python collector.py ${{ inputs.date }}
       - name: Commit data
         run: |
           git config user.name "bot"; git config user.email "bot@users.noreply.github.com"
