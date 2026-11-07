@@ -123,11 +123,11 @@ def stats(events, key):
 
 
 e = html.escape
-def pct(v):
+def pct(v, unit="%"):
     if v in (None, ""):
         return "<span class='na'>-</span>"
     v = float(v); c = "up" if v > 0 else "dn" if v < 0 else ""
-    return f"<span class='{c}'>{v:+.2f}%</span>"
+    return f"<span class='{c}'>{v:+.2f}{unit}</span>"
 
 
 def render(events, today):
@@ -147,24 +147,24 @@ def render(events, today):
         f"<td>{pct(S[f'r{h}']['tavg']) if S[f'r{h}'] else '-'}</td>"
         f"<td>{pct(S[f'r{h}']['med']) if S[f'r{h}'] else '-'}</td>"
         f"<td>{S[f'r{h}']['win'] if S[f'r{h}'] else '-'}%</td>"
-        f"<td>{pct(S[f'x{h}']['avg']) if S[f'x{h}'] else '-'}</td>"
+        f"<td>{pct(S[f'x{h}']['avg'], '%p') if S[f'x{h}'] else '-'}</td>"
         f"<td>{S[f'x{h}']['win'] if S[f'x{h}'] else '-'}%</td></tr>" for h in HORIZONS)
     mrows = "".join(
         f"<tr><td>{m}</td>" + "".join(
-            f"<td>{pct(byM[m][h]['avg']) if byM[m][h] else '-'} <small>({byM[m][h]['n'] if byM[m][h] else 0}건)</small></td>"
+            f"<td>{pct(byM[m][h]['avg'], '%p') if byM[m][h] else '-'} <small>({byM[m][h]['n'] if byM[m][h] else 0}건)</small></td>"
             for h in HORIZONS) + "</tr>" for m in byM)
 
     done = [x for x in events if x.get("x20") not in (None, "") and not x.get("flag")]
     flagged = [x for x in events if x.get("flag")]
     best = sorted(done, key=lambda x: float(x["x20"]), reverse=True)[:5]
     worst = sorted(done, key=lambda x: float(x["x20"]))[:5]
-    li = lambda L: "".join(f"<li><b>{e(x['corp'])}</b> <small>{x['date']}</small> 시장 대비 {pct(x['x20'])}</li>" for x in L)
+    li = lambda L: "".join(f"<li><b>{e(x['corp'])}</b> <small>{x['date']}</small> 시장 대비 {pct(x['x20'], '%p')}</li>" for x in L)
 
     recent = sorted(events, key=lambda x: x["date"], reverse=True)[:80]
     trows = "".join(
         f"<tr><td>{x['date']}</td><td>{e(x['market'])}</td><td><a href='{x['url']}' rel='nofollow'>{e(x['corp'])}</a>{' <small>※제외</small>' if x.get('flag') else ''}</td>"
         + "".join(f"<td>{pct(x.get(f'r{h}'))}</td>" for h in HORIZONS)
-        + f"<td>{pct(x.get('x20'))}</td></tr>" for x in recent)
+        + f"<td>{pct(x.get('x20'), '%p')}</td></tr>" for x in recent)
 
     faq = []
     if s20:
@@ -201,7 +201,7 @@ td:nth-child(-n+3){{text-align:left}}th{{background:#f4f4f4}}.up{{color:#c0392b}
 <p><small>{today.isoformat()} 업데이트 · 대상: 2026-01-01 이후 코스피·코스닥 '{CFG["kw"]}' 공시(정정 제외) · 기준가: 공시일 종가 · 초과수익률 = 종목 수익률 − 같은 기간 코스피/코스닥 지수 수익률</small></p>
 <h2>전체 성과</h2>
 <table><thead><tr><th>기간</th><th>건수</th><th>평균</th><th>절사평균*</th><th>중앙값</th><th>상승비율</th><th>시장 대비 평균</th><th>시장 이긴 비율</th></tr></thead><tbody>{rows}</tbody></table>
-<p><small>* 절사평균: 극단값 영향을 줄이기 위해 상·하위 5%를 제외한 평균. 가격제한폭(±30%)을 넘는 하루 변동이 있는 공시 {len(flagged)}건(액면분할·감자·거래정지 등 의심)은 통계에서 제외.</small></p>
+<p><small>* 절사평균: 상·하위 각 5%를 제외한 평균. 집계 제외 {len(flagged)}건: 이상 일간 변동(절대값 30.5% 초과) {sum(x.get('flag') == 'abnormal_daily_move' for x in flagged)}건, 기준가격·기준 거래일 누락 {sum(x.get('flag') in ('missing_base_price', 'missing_base_calendar') for x in flagged)}건. 이상 변동 필터는 분할·감자 여부를 확정하지 않습니다. 시장 대비 유효 표본: {', '.join(f"H+{h} {S[f'x{h}']['n'] if S[f'x{h}'] else 0}건" for h in HORIZONS)}.</small></p>
 <h2>시장별 초과수익률</h2>
 <table><thead><tr><th>시장</th>{''.join(f'<th>H+{h}</th>' for h in HORIZONS)}</tr></thead><tbody>{mrows}</tbody></table>
 <h2>20거래일 성적 상위 5</h2><ol>{li(best)}</ol>
