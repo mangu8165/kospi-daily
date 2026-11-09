@@ -20,4 +20,5 @@
 - [사이트맵](https://mangu8165.github.io/kospi-daily/sitemap.xml)
 
 ## 최근 일일 자료
+- [2026-11-09 공시·수급](https://mangu8165.github.io/kospi-daily/2026-11-09.html): 집계 JSON https://mangu8165.github.io/kospi-daily/2026-11-09.json
 - [2026-11-06 공시·수급](https://mangu8165.github.io/kospi-daily/2026-11-06.html): 집계 JSON https://mangu8165.github.io/kospi-daily/2026-11-06.json
